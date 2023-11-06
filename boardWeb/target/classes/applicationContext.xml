@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 	<bean id="tv" class="com.ezen.polymorphism.SamsungTV" init-method="initMethod"
+	destroy-method="destroyMethod" lazy-init="true" scope="prototype"></bean> -->
+	
+	<bean id="tv" class="com.ezen.polymorphism.SamsungTV" >
+<!-- 	<constructor-arg ref="apple"></constructor-arg>
+		<constructor-arg value="38000"></constructor-arg> -->
+		<property name="speaker" ref="sony"></property> <!-- set에 Speaker와 이름동일해야함 첫글자 소문자 -->
+		<property name="price" ref="39000"></property>
+	</bean>
+	
+	<bean id="tv2" class="com.ezen.polymorphism.LGTV"> </bean>
+	
+	<bean id="sony" class="com.ezen.polymorphism.SonySpeaker">
+	</bean>
+	
+	<bean id="apple" class="com.ezen.polymorphism.AppleSpeaker"></bean>
+	<!-- 일일이 객체 생성하는 과정  -->
+</beans>
