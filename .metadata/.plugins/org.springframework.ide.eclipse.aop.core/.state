@@ -2,5 +2,6 @@
 <aop-reference-model>
 <aop-project name="boardWeb"/>
 <aop-project name="boardWeb2"/>
+<aop-project name="MybatisTest"/>
 <aop-project name="ex00"/>
 </aop-reference-model>
