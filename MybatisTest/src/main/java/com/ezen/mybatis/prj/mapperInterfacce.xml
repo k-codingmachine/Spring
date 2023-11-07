@@ -8,6 +8,10 @@
     select * from mybatis where id = #{id}
   </select>
   
+   <select id="selectAll"  resultType="com.ezen.mybatis.prj.MemberVO" >
+    select * from mybatis order by id
+  </select>
+  
    <insert id="insertMember"  parameterType="com.ezen.mybatis.prj.MemberVO">
       insert into mybatis (id, name, phone, address) values (
         #{id}, #{name}, #{phone}, #{address}
@@ -17,4 +21,12 @@
   	<delete id="deleteMember">
   	delete from mybatis where id = #{id}
 	</delete>
+	
+	<update id="updateMember">
+	  update mybatis set
+	    name = #{name},
+	    phone = #{phone},
+	    address = #{address}
+	  where id = #{id}
+	</update>
 </mapper>
