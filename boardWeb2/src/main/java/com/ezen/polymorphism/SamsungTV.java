@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component("samsung")
 public class SamsungTV implements TV{
 	
-//	@Autowired 객체중에 타입이 일치하는것 알아서 객체생성(중복시 동작x)
+	@Autowired //객체중에 타입이 일치하는것 알아서 객체생성(중복시 동작x)
 	@Qualifier("apple") // 중복시 사용(하나 고른다)
 	private Speaker speaker;
 	

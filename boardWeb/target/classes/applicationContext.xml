@@ -10,7 +10,7 @@
 <!-- 	<constructor-arg ref="apple"></constructor-arg>
 		<constructor-arg value="38000"></constructor-arg> -->
 		<property name="speaker" ref="sony"></property> <!-- set에 Speaker와 이름동일해야함 첫글자 소문자 -->
-		<property name="price" ref="39000"></property>
+		<property name="price" value="39000"></property>
 	</bean>
 	
 	<bean id="tv2" class="com.ezen.polymorphism.LGTV"> </bean>
