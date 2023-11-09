@@ -27,11 +27,19 @@ public class BoardController {
 		model.addAttribute("list", service.getList());
 	}
 	
+	@GetMapping("/register")
+	public void register() {
+		
+	}
+	
+	
+	
+	
 	@PostMapping("/register")
 	public String register(BoardVO board, RedirectAttributes rttr) {
 		log.info("register");
 		service.register(board);
-		rttr.addFlashAttribute("result",board.getBno()); // addFlashAttribute 한번만 보여준다.
+		rttr.addFlashAttribute("result",board.getBno()); // addFlashAttribute 한번만 보여준다.(새로고침시 사라짐)
 		return "redirect:/board/list";
 	}
 	
