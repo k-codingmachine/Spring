@@ -13,7 +13,17 @@ D:\javaWork\works\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3
 \MybatisTest\src\main\java
 D:\javaWork\works\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3012140731.index
 \ex01\src\main\java
+D:\javaWork\works\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4190927942.index
+\ex02_1\src\main\java
+D:\javaWork\works\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2247549840.index
+\ex02_1\src\main\java
 D:\javaWork\works\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\755943323.index
 \ex02\src\main\java
 D:\javaWork\works\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\391915402.index
 \boardWeb\src\main\java
+D:\javaWork\works\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2940883736.index
+\ex02_2\src\main\java
+D:\javaWork\works\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2746041126.index
+\ex02_2\src\main\java
+D:\javaWork\works\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1608959084.index
+\ex02_2\src\main\java

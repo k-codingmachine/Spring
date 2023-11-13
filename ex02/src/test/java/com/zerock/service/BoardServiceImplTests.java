@@ -7,6 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.zerock.domain.BoardVO;
+import com.zerock.domain.Criterial;
 import com.zerock.mapper.BoardMapper;
 
 import lombok.extern.log4j.Log4j;
@@ -32,7 +33,8 @@ public class BoardServiceImplTests {
 	
 	@Test
 	public void testGetList() {
-		boardService.getList()
+		Criterial cri = new Criterial();
+		boardService.getList(cri)
 					.forEach(board->log.info(board));
 	}
 	

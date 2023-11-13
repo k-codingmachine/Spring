@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Select;
 
 import com.zerock.domain.BoardVO;
+import com.zerock.domain.Criterial;
 
 
 
@@ -13,6 +14,9 @@ public interface BoardMapper {
 	// 전체 데이터 조회
 //	@Select("select * from tbl_board where bno>0")
 	public List<BoardVO> getList();
+	
+	// 페이징 처리
+	public List<BoardVO> getListWithPaging(Criterial cri);
 	
 	
 	// insert문 bno값 알 필요없을때

@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.zerock.domain.BoardVO;
+import com.zerock.domain.Criterial;
 
 import lombok.extern.log4j.Log4j;
 
@@ -81,7 +82,16 @@ public class BoardMapperTests {
 		log.info("result : " + result);
 	}
 	
-	
+	@Test
+	   public void testGetPaging() {
+	      Criterial cri = new Criterial();
+	      // 10개씩 3페이지
+	      cri.setPageNum(3);
+	      cri.setAmount(10);
+	      
+	      List<BoardVO> list = mapper.getListWithPaging(cri);
+	      list.forEach(board -> log.info(board.getBno()));
+	   }
 	
 	
 	
