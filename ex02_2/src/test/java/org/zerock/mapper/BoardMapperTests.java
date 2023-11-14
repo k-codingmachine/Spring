@@ -90,7 +90,12 @@ public class BoardMapperTests {
 	
 	@Test
 	public void testCount() {
-		log.info(mapper.getTotalCount(new Criterial(1,10)));
+		
+		Criterial cri = new Criterial();
+		cri.setType("TWC");
+		cri.setKeyword("냥뇽녕냥입니다.");
+		
+		log.info(mapper.getTotalCount(cri));
 	}
 	
 	@Test
@@ -110,6 +115,17 @@ public class BoardMapperTests {
 		
 	}
 	
+	@Test
+	public void testSearchPaging() {
+		Criterial cri = new Criterial();
+		cri.setType("TWC");
+		cri.setKeyword("냥뇽녕냥입니다.");
+		
+//		List<BoardVO> list = mapper.getListWithPaging(cri);
+//		log.info(list);
+		
+		mapper.getListWithPaging(cri).forEach(list -> log.info(list));
+	}
 	
 	
 	

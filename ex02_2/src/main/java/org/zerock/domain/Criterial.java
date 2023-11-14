@@ -17,6 +17,12 @@ public class Criterial {
 	
 	public Criterial() {
 		this(1,10); 
+		System.out.println("----------------");
+		System.out.println(pageNum);
+		System.out.println(amount);
+		System.out.println(type);
+		System.out.println(keyword);		
+		System.out.println("----------------");
 	}
 
 	public Criterial(int pageNum, int amount) {
