@@ -30,7 +30,6 @@ INDEX VERSION 1.131+D:\javaWork\works\Spring\.metadata\.plugins\org.eclipse.jdt.
 3662123078.index
 323909498.index
 2312759440.index
-2533167676.index
 2979001902.index
 3815248420.index
 3546414548.index
