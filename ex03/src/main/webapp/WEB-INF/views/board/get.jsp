@@ -12,6 +12,75 @@
     <!-- /.col-lg-12 -->
 </div>
 <!-- /.row -->
+
+<script type="text/javascript" src="/resources/js/reply.js"></script>
+
+<script>
+	
+	console.log("===========================");
+	console.log("JS TEST");
+	
+	var bnoValue = '${board.bno}';
+	
+	console.log("bnoValue : " +bnoValue);
+
+	replyService.get(
+			15,
+			function(data){
+				console.log(data);
+			},
+			function(err){
+				console.log(err);
+			}
+	);
+	
+	
+	
+/* 	replyService.update(
+			{rno:15, reply:"Modify Reply...."},
+			function(date){
+				alert("수정완료 >>" + data);
+			},
+			function(er){
+				alert("실패 >> " + er );
+			}
+	); */
+	
+	
+	
+	/* 	replyService.remove(
+			16, 
+		function(data){
+			console.log(data);
+			if(data === "success"){
+				alert("REMOVE");
+				}
+		},
+		function(err) {
+			alert("ERROR....");
+		
+		}
+	);
+	 */
+	
+	
+/* 	replyService.getList({bno:bnoValue, page:1}, function(list) {
+		for(var i=0, len= list.length || 0; i<len; i++){
+			console.log(list[i]);
+		}}); */
+	
+	/* var addValue = {
+			reply: "JS Test",
+			replyer : "tester",
+			bno: bnoValue
+		};
+	
+	replyService.add(addValue, function(result) {
+		alert("RESULT : " +result);
+	}); */
+	
+	
+</script>
 <div class="row">
     <div class="col-lg-12">
         <div class="panel panel-default">
