@@ -6,4 +6,3 @@ INDEX VERSION 1.4+D:\javaWork\works\Spring\.metadata\.plugins\org.eclipse.wst.js
 1472633501.index
 2498932179.index
 2399600456.index
-3340328501.index

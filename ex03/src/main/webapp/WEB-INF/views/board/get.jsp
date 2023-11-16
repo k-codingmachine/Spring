@@ -129,15 +129,18 @@
           <button id="modalRegisterBtn" type="button" class="btn btn-primary" >Register</button>
           <button id="modalModBtn" type="button" class="btn btn-warning" >Modify</button>
           <button id="modalRemoveBtn" type="button" class="btn btn-danger" >Remove</button>
-          <button id="modalCloseBtn" type="button" class="btn btn-info" >Close</button>
+          <button id="modalCloseBtn" type="button" class="btn btn-info" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>     
 <!-- /모달창 추가 -->     
 
-
-
+<style>
+ 	.chat > li:hover{
+ 		cursor:pointer;
+ 	}
+</style>
 
 
 <script type = "text/javascript" src="/resources/js/reply.js"> </script>
@@ -175,7 +178,7 @@
       
    var modal = $(".modal");
    var modalInputReply = modal.find("input[name='reply']");
-   var c = modal.find("input[name='replyer']");
+   var modalInputReplyer = modal.find("input[name='replyer']");
    var modalInputReplyDate = modal.find("input[name='replyDate']");
    
    var modalRegisterBtn = $("#modalRegisterBtn")
@@ -197,7 +200,7 @@
 	   var reply = {
 			   bno : bnoValue,
 			   reply : modalInputReply.val(),
-			   replyer : modalInputReply.val()
+			   replyer : modalInputReplyer.val()
 			   
 	   };
 	   
@@ -209,6 +212,58 @@
 		   showList(1); // 댓글 내용 새로 고침
 	   });
    });
+   
+
+
+   // 댓글 조회 클릭 이벤트 처리
+   $(".chat").on("click", "li", function(e){
+	  var rno = $(this).data("rno");
+// 	  console.log("rno >> " +rno);
+
+	replyService.get(rno, function(reply){
+		modalInputReply.val(reply.reply);
+		modalInputReplyer.val(reply.replyer).attr("readonly", "readonly");
+		modalInputReplyDate.val(replyService.displayTime(reply.replyDate)).attr("readonly", "readonly");
+		
+		modal.data("rno", reply.rno);
+		
+		modal.find("button[id != 'modalCloseBtn']").hide();
+		modalModBtn.show();
+		modalRemoveBtn.show();
+		
+	    $(".modal").modal("show");
+	});
+  });
+   
+   // 댓글 수정
+   modalModBtn.on("click", function(e){
+	   
+	   var reply = {
+			   rno : modal.data("rno"),
+			   reply : modalInputReply.val()
+			   
+	   };
+	   replyService.update(reply, function(result){
+		   alert(result);
+		   modal.modal("hide");
+		   showList(1);
+	   });
+   });
+   
+   // 댓글 삭제
+   modalRemoveBtn.on("click", function(e){
+	   
+	   var reply = modal.data("rno");
+	   
+	   replyService.remove(reply, function(result){
+		   alert(result);
+		   modal.modal("hide");
+		   showList(1);
+	   });
+   });
+   
+   
+   
    /*
    replyService.get(
       21,

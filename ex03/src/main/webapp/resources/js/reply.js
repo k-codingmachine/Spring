@@ -3,7 +3,6 @@ console.log("Reply Module.......");
 var replyService = (function(){
     
     function add(reply, callback, error){
-        console.log("reply........");
         $.ajax({
             type : 'post',
             url : '/replies/new',
@@ -62,6 +61,7 @@ var replyService = (function(){
 
     function update(reply, callback, error){
         console.log("RNO : " + reply.rno);
+        console.log("replyer :" + reply.reply);
 
         $.ajax({
             type : "put",
