@@ -28,6 +28,12 @@ public class ReplyMapperTests {
 	};
 	
 	@Test
+	public void testGetCountByBno() {
+		mapper.getCountByBno(2621455L);
+	}
+	
+	
+	@Test
 	public void testGetListWithPaging() {
 //		List<ReplyVO> list = 
 //				mapper.getListWithPaging(new Criterial(), 2621455L);
@@ -36,7 +42,7 @@ public class ReplyMapperTests {
 //			log.info(vo);
 		
 		
-		mapper.getListWithPaging(new Criterial(), 2621455L)
+		mapper.getListWithPaging(new Criterial(1,2), 2621455L)
 		.forEach( list -> log.info(list));
 	}
 	

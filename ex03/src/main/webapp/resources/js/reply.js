@@ -28,8 +28,9 @@ var replyService = (function(){
             type : "get",
             url : "/replies/pages/"+bno+"/" + page + ".json",
             success : function(data, status, xhr){
+                console.log("data >>>>" + data);
                 if(callback){
-                    callback(data)
+                    callback(data.replyCnt, data.list);
                 }
             },
             error: function(xhr, status, er){
