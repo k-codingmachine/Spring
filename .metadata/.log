@@ -12688,3 +12688,9 @@ Caused by: java.security.cert.CertificateException: No subject alternative DNS n
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2023-11-20 12:56:37.133
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-11-20 13:03:10.196
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-11-20 13:03:10.203
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
