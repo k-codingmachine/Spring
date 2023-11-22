@@ -27,7 +27,7 @@
                 <table width="100%" class="table table-striped table-bordered table-hover" >
                     <thead>
                         <tr>
-                            <th>#번호</th>
+                            <th>번호</th>
                             <th>제목</th>
                             <th>작성자</th>
                             <th>작성일</th>

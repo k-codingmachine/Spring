@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.MemberMapper">
+
+<insert id="insert">
+ insert into ezen(bno, name,phone, address, email, age)
+ values(EZEN_1.nextval, #{name},#{phone},#{address},#{email},#{age})
+</insert>
+
+<select id="read" resultType="org.zerock.domain.MemberVO">
+  	select * from ezen where bno = #{bno} 
+</select>
+
+  <select id="getList" 
+  			resultType="org.zerock.domain.MemberVO">
+  	 select * from ezen where bno > 0	order by bno desc
+  </select>
+  
+   <delete id="delete">
+  	delete from ezen where bno = #{bno}
+  </delete>
+
+ <update id="update">
+  	update ezen set
+  	name = #{name},
+  	phone = #{phone},
+  	address = #{address},
+  	email = #{email},
+  	age = #{age}
+  	where bno = #{bno}
+  </update>
+
+</mapper>
