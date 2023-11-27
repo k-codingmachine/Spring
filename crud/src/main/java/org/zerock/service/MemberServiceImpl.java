@@ -3,6 +3,7 @@ package org.zerock.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.zerock.domain.Criterial;
 import org.zerock.domain.MemberVO;
 import org.zerock.mapper.MemberMapper;
 
@@ -39,6 +40,11 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public boolean remove(Long bno) {
 		return memberMapper.delete(bno) == 1;
+	}
+
+	@Override
+	public int getTotal(Criterial cri) {
+		return memberMapper.getTotalCount(cri);
 	}
 
 }

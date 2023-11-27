@@ -114,6 +114,10 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\javaWork\works\spring project\Project-dev"/>
+			<item value="D:\javaWork\works\Spring\Project-dev"/>
+			<item value="C:\Users\M4\Desktop\Spring_202311-main\ex04_1"/>
+			<item value="D:\javaWork\works\Spring\ex04"/>
 			<item value="D:\javaWork\works\Spring\ex02"/>
 			<item value="D:\javaWork\works\Spring\ex01"/>
 			<item value="D:\javaWork\works\Spring\ex03"/>

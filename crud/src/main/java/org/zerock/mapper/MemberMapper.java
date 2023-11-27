@@ -2,6 +2,7 @@ package org.zerock.mapper;
 
 import java.util.List;
 
+import org.zerock.domain.Criterial;
 import org.zerock.domain.MemberVO;
 
 public interface MemberMapper {
@@ -15,4 +16,6 @@ public interface MemberMapper {
 	public int delete(Long bno);
 
 	public int update(MemberVO vo);
+	
+	public int getTotalCount(Criterial cri);
 }
